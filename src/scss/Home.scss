@@ -1,0 +1,196 @@
+$white: #fdf9fc;
+$red: red;
+$back: #212529;
+$nav-main1-text1: #6c757d;
+$nav-main1-text2: #dc3545;
+$nav-main1-text3: rgb(0, 255, 13);
+$nav-main1-text4: rgb(238, 80, 177);
+$nav-main1-text5: #35dc5f;
+$nav-main1-text6: #dccb35;
+$new-1: -webkit-linear-gradient(#00569d, white, #00569d) 1 10 1;
+$new-2: -webkit-linear-gradient(#00569d, $white, #7b9d00) 1 10 1;
+$title-1: #f60;
+$title-2: rgb(255, 0, 0);
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: $white;
+  color: $back;
+  text-align: left;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: block;
+  width: 1400px;
+  margin: auto;
+}
+
+.image-China {
+  margin-left: 220px;
+}
+
+//疫情现状部分
+.tist {
+  margin-left: -900px;
+  padding-bottom: 10px;
+}
+
+.card-1 thead th {
+  vertical-align: bottom;
+  text-align: center;
+  border-right: 1px solid rgb(224, 224, 222);
+  border-image: -webkit-linear-gradient(#9d0a00, rgb(182, 132, 132), #00569d) 1 10 1;
+}
+
+.fist {
+  border-left: 1px solid rgb(224, 224, 222);
+  border-image: -webkit-linear-gradient(#00569d, $white, #00569d) 1 10 1;
+}
+
+.card-1 td,
+.card-1 th {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.small,
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+@mixin text($color) {
+  color: $color;
+}
+
+.text-muted {
+  @include text($nav-main1-text1);
+}
+
+.text-danger {
+  @include text($nav-main1-text2);
+}
+
+.text-warning {
+  @include text($nav-main1-text3);
+}
+
+.text-info {
+  @include text($nav-main1-text4);
+}
+
+.text-primary {
+  @include text($nav-main1-text5);
+}
+
+.text-success {
+  @include text($nav-main1-text6);
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  padding: 3px 10px;
+
+  border-left: 0.2rem solid $title-1;
+
+  position: relative;
+}
+
+.card-2 {
+  padding: 40px 50px;
+  background-color: $white;
+  box-shadow: 0 0.08rem 0.45rem 0 rgba(34, 34, 119, 0.69);
+}
+
+.head {
+  display: flex;
+  color: #9b9b9b;
+  padding-bottom: 15px;
+}
+
+.na {
+  width: 250px;
+  font-size: 26px;
+  text-align: center;
+  color: $white;
+  border: 1px solid $white;
+  background-color: $title-1;
+}
+
+.text {
+  width: 215px;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid $white;
+}
+
+.card-2>.tbody:nth-child(2n) {
+  background-color: #a4a4a7;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+//实时动态与新闻样式
+@mixin new($color) {
+  padding: 1rem 0;
+  border-bottom: 2px solid $white;
+  border-image: $color;
+}
+
+@mixin title($color) {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $color;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+.new-1 {
+  @include new($new-1);
+}
+
+.new-2 {
+  @include new($new-2);
+}
+
+.new-date-1 {
+  color: #888;
+}
+
+.new-date-2 {
+  @extend .new-date-1;
+}
+
+.new-date-1>.relative-1,
+.new-date-2>.relative-2 {
+  color: $back;
+  font-weight: 600;
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.title-1 {
+  @include title($title-1);
+}
+
+.title-2 {
+  @include title($title-2);
+}

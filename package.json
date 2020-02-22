@@ -1,20 +1,29 @@
 {
-  "name": "ncov",
+  "name": "nocv",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.5"
+    "axios": "^0.19.1",
+    "chart.js": "^2.9.3",
+    "core-js": "^3.4.4",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-chartjs": "^3.5.0",
+    "vue-router": "^3.1.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.0",
-    "@vue/cli-plugin-router": "^4.2.0",
-    "@vue/cli-service": "^4.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
